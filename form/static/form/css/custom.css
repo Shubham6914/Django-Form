@@ -1,0 +1,87 @@
+/* 
+body {
+   background-color: antiquewhite;
+}
+.general-info-form h3 {
+   color: blue; 
+}
+.registration-block {
+   background-color: #f8f9fa; 
+   padding: 20px;
+}
+.general-info-form {
+   background-color: #ffffff; 
+   padding: 20px;
+}
+.contact-details-form {
+   background-color: #007bff; 
+   color: #ffffff; 
+   padding: 20px;
+} */
+
+/* Custom CSS */
+body {
+   font-family: 'Montserrat', sans-serif;
+   background-color: antiquewhite;
+}
+
+.page-content {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+}
+
+.form-v10-content {
+   background-color: #fff;
+   border-radius: 10px;
+   overflow: hidden;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-detail {
+   display: flex;
+}
+
+.form-left, .form-right {
+   flex: 1;
+   padding: 20px;
+}
+
+.form-left h2, .form-right h2 {
+   color: #333;
+   font-size: 24px;
+   margin-bottom: 20px;
+}
+
+.form-group {
+   margin-bottom: 20px;
+}
+
+.form-row {
+   margin-bottom: 15px;
+}
+
+.input-text {
+   width: 100%;
+   padding: 10px;
+   box-sizing: border-box;
+   border: 1px solid #ddd;
+   border-radius: 4px;
+}
+
+.select-btn {
+   position: absolute;
+   right: 10px;
+   top: 50%;
+   transform: translateY(-50%);
+   pointer-events: none;
+}
+
+/* Add more custom styles as needed */
+.form-right {
+   flex: 1;
+   padding: 20px;
+   background-color: blueviolet; /* Add this line to set the background color to blue */
+}
+

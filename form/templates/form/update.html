@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Update Data - Registration</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="{% static 'form/css/custom.css' %}" />
+    <title>Registration Form</title>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.8/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+
+<body class="form-v10">
+    <div class="page-content">
+        <div class="form-v10-content">
+            <form class="form-detail" action="{% url 'update_registration' id=registration.id %}" method="POST" id="updateForm">
+                {% csrf_token %}
+                <div class="form-left">
+                    <h2>General Information</h2>
+                    <div class="form-group">
+                        <label>Title</label>
+                        <input type="text" name="title" class="form-control" value="{{ registration.title }}" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>First Name</label>
+                            <input type="text" name="first_name" class="form-control" value="{{ registration.first_name }}" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Last Name</label>
+                            <input type="text" name="last_name" class="form-control" value="{{ registration.last_name }}" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Position</label>
+                        <input type="text" name="position" class="form-control" value="{{ registration.position }}" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Company</label>
+                        <input type="text" name="company" class="form-control" value="{{ registration.company }}" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Business Arena</label>
+                            <input type="text" name="business" class="form-control" value="{{ registration.business }}" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Employees</label>
+                            <input type="text" name="employees" class="form-control" value="{{ registration.employees }}" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-right">
+                    <h2>Contact Details</h2>
+                    <div class="form-group">
+                        <label>Street + Nr</label>
+                        <input type="text" name="street" class="form-control" value="{{ registration.street }}" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Additional Information</label>
+                        <input type="text" name="additional" class="form-control" value="{{ registration.additional }}" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Zip Code</label>
+                            <input type="text" name="zipcode" class="form-control" value="{{ registration.zipcode }}" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Place</label>
+                            <input type="text" name="place" class="form-control" value="{{ registration.place }}" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Country</label>
+                        <input type="text" name="country" class="form-control" value="{{ registration.country }}" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label>Code +</label>
+                            <input type="text" name="code" class="form-control" value="{{ registration.code }}" required>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Phone Number</label>
+                            <input type="text" name="phone" class="form-control" value="{{ registration.phone }}" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Your Email</label>
+                        <input type="text" name="your_email" class="form-control" value="{{ registration.your_email }}" required>
+                    </div>
+                    <div class="form-checkbox">
+                        <input type="checkbox" name="accept_terms" id="accept-terms-checkbox" {% if registration.accept_terms %}checked{% endif %}>
+                        <label class="container" for="accept-terms-checkbox">
+                            <span class="checkmark"></span>
+                            I do accept the <a href="#" class="text">Terms and Conditions</a> of your site.
+                        </label>
+                    </div>
+                    <div class="form-row-last">
+                        <input type="submit" name="update" class="btn btn-primary" value="Update Data">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+
+
+</html>
